@@ -12,6 +12,27 @@ function handleSearch(event) {
     .then(response => response.json())
     .then(data => {
         console.log(data);
+
+        const cityName = document.querySelector('#city-name');
+        cityName.textContent = data.name;
+
+        const date = document.querySelector('#date');
+        const dateObj = new Date();
+        const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        date.textContent = dateObj.toLocaleDateString('enUS', options);
+        
+        const icon = document.querySelector('#icon');
+        icon.setAttribute('src', `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+        icon.setAttribute('alt', data.weather[0].description);
+
+        const temperature = document.querySelector('#temperature');
+        temperature.textContent = `Temperature: ${data.main.temp}°C`;
+
+        const humidity = document.querySelector('#humidity');
+        humidity.textContent = `Humidity: ${data.main.humidity}%`;
+
+        const windSpeed = document.querySelector('wind-speed');
+        windSpeed.textContent = `Wind Speed: ${data.wind.speed}km/h`;
     })
     .catch(error => {
         console.error(error);
