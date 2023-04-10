@@ -36,6 +36,10 @@ For viewing and running the application, open the deployed application in your p
 
 Open the deployed application in your preferred web browser. Search for a city and click the "search" button to pull up the current and 5-day forecast for said city.
 
+GitHub Repository Link: https://github.com/grt002/Weather-Dashboard
+
+Deployed Application Link: https://grt002.github.io/Weather-Dashboard/
+
 ![Screenshot of Weather Dashboard page](assets/images/Screen%20Shot%202023-04-10%20at%204.51.31%20PM.png)
 
 ## Credits
